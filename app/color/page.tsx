@@ -2,19 +2,20 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function Page() {
   const colors = [
-    "red",
-    "pink",
-    "orange",
-    "yellow",
-    "green",
-    "lightblue",
-    "blue",
-    "brown",
-    "black",
-    "white",
+    "#FF0000", // red
+    "#FFC0CB", // pink
+    "#FFA500", // orange
+    "#FFFF00", // yellow
+    "#008000", // green
+    "#ADD8E6", // lightblue
+    "#0000FF", // blue
+    "#A52A2A", // brown
+    "#000000", // black
+    "#FFFFFF", // white
   ];
   const [color, setColor] = useState("");
 
@@ -27,21 +28,24 @@ export default function Page() {
     <div
       className="flex items-center justify-center h-screen"
       style={{ backgroundColor: color }}
+      onClick={changeBackgroundColor}
     >
       <div className="absolute top-0 left-0 m-4">
         <Link href="/">
-          <button className="p-2 bg-green-500 text-white rounded">
-            もどる
+          <button
+            className={`${
+              color === "#FFFFFF" ||
+              color === "#FFFF00" ||
+              color === "#FFC0CB" ||
+              color === "#FFA500"
+                ? "text-slate-700"
+                : "text-slate-50"
+            } p-2 text-2xl`}
+          >
+            <FaArrowLeft />
           </button>
         </Link>
       </div>
-
-      <button
-        onClick={changeBackgroundColor}
-        className="py-8 px-5 text-2xl bg-blue-500 text-white rounded animate-bounce select-none"
-      >
-        いろをかえる
-      </button>
     </div>
   );
 }
