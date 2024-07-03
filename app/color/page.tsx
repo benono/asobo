@@ -38,7 +38,7 @@ export default function Page() {
 
       <button
         onClick={changeBackgroundColor}
-        className="p-2 bg-blue-500 text-white rounded animate-bounce"
+        className="py-8 px-5 text-2xl bg-blue-500 text-white rounded animate-bounce select-none"
       >
         いろをかえる
       </button>
