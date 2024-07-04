@@ -26,9 +26,9 @@ export default function Page() {
 
   return (
     <div
-      className="flex items-center justify-center h-screen"
+      className="flex items-center justify-center h-screen overflow-hidden"
       style={{ backgroundColor: color }}
-      onClick={changeBackgroundColor}
+      onMouseDown={changeBackgroundColor}
     >
       <div className="absolute top-0 left-0 m-4">
         <Link href="/">
@@ -37,7 +37,8 @@ export default function Page() {
               color === "#FFFFFF" ||
               color === "#FFFF00" ||
               color === "#FFC0CB" ||
-              color === "#FFA500"
+              color === "#FFA500" ||
+              color === ""
                 ? "text-slate-700"
                 : "text-slate-50"
             } p-2 text-2xl`}
