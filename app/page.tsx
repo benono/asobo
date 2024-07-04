@@ -3,7 +3,7 @@ import Link from "next/link";
 const items = [
   { label: "Home", href: "/" },
   { label: "いろあそび", href: "/color" },
-  { label: "どうぶつなあに", href: "/guess-animal" },
+  { label: "どうぶつなあに", href: "/animal" },
 ];
 
 export default function Home() {
